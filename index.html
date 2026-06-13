@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Utkarsh Singh — Product Designer</title>
 <meta name="description" content="Utkarsh Singh — Product Designer with 7 years across B2B SaaS, FinTech and consumer products. Bangalore, India." />
+
+<!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -14,10 +23,10 @@
 :root{
   --paper:#F1F1EF;
   --ink:#0D0D0C;
-  --ink-60:#5A5A55;
-  --ink-35:#9C9C95;
+  --ink-60:#4A4A45;
+  --ink-35:#6E6E68;
   --hair:#D9D9D4;
-  --blue:#2B3CF0;
+  --blue:#2030D8;
   --white:#FFFFFF;
   --pad:clamp(24px,5vw,72px);
 }
@@ -37,7 +46,7 @@ body{
 
 .mono{
   font-family:'IBM Plex Mono',monospace;
-  font-size:11px;
+  font-size:12px;
   letter-spacing:0.05em;
   text-transform:uppercase;
 }
@@ -84,9 +93,10 @@ nav.scrolled{border-color:var(--hair)}
   font-size:15px;letter-spacing:.01em;
   color:var(--ink);text-decoration:none;
 }
-.nav-right{display:flex;gap:32px;align-items:center}
+.nav-right{display:flex;gap:28px;align-items:center}
 .nav-right a{
-  color:var(--ink-60);text-decoration:none;
+  color:var(--ink);text-decoration:none;
+  font-weight:500;
   transition:color .2s;
 }
 .nav-right a:hover{color:var(--blue)}
@@ -261,6 +271,8 @@ section{position:relative;z-index:1}
 .canvas img{
   width:100%;height:auto;display:block;
 }
+a.canvas-link{display:block;cursor:pointer;outline-offset:4px}
+a.canvas-link:focus-visible{outline:2px solid var(--blue)}
 
 /* ── approach strip ── */
 .approach{
@@ -335,6 +347,18 @@ section{position:relative;z-index:1}
 .contact-row{
   display:flex;gap:14px;flex-wrap:wrap;
 }
+.contact-email{
+  display:inline-block;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:clamp(16px,2vw,22px);
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:2px solid var(--blue);
+  padding-bottom:3px;
+  margin-bottom:40px;
+  transition:color .2s;
+}
+.contact-email:hover{color:var(--blue)}
 .c-link{
   font-family:'IBM Plex Mono',monospace;font-size:12px;
   letter-spacing:.06em;text-transform:uppercase;
@@ -397,8 +421,8 @@ footer{
     <a class="nav-link" href="#work">Work</a>
     <a class="nav-link" href="#about">About</a>
     <a class="nav-link" href="#contact">Contact</a>
-    <a class="nav-link" href="resume.pdf" download>Resume ↓</a>
-    <span class="nav-status">Open to roles</span>
+    <a class="nav-link" href="resume.pdf" download data-resume="nav">Resume ↓</a>
+    <span class="nav-status">Open to work</span>
   </div>
 </nav>
 
@@ -451,12 +475,12 @@ footer{
         an in-app virtual store, and a service that fits every schedule.
       </p>
       <div class="p-spec mono">
-        <div class="row"><span class="k">Role</span><span class="v">UI Designer</span></div>
-        <div class="row"><span class="k">Duration</span><span class="v">6 Months</span></div>
+        <div class="row"><span class="k">Role</span><span class="v">UI Designer / Visual Designer</span></div>
+        <div class="row"><span class="k">Duration</span><span class="v">2 Years</span></div>
         <div class="row"><span class="k">Platform</span><span class="v">Mobile Application</span></div>
         <div class="row"><span class="k">Process</span><span class="v">Research → Sketch → Test → UI → Prototype</span></div>
       </div>
-      <a class="p-link" href="https://www.behance.net/gallery/137510953/Chaayos" target="_blank" rel="noopener">
+      <a class="p-link" href="https://www.behance.net/gallery/137510953/Chaayos" target="_blank" rel="noopener" data-case="Chaayos" data-where="button">
         Open case study
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
       </a>
@@ -465,7 +489,9 @@ footer{
       <div class="p-frame">
         <span class="dim top">CASE — 01</span>
         <div class="canvas">
-          <img src="images/chaayos.jpg" alt="Chaayos mobile app — express ordering experience" loading="lazy" />
+          <a class="canvas-link" href="https://www.behance.net/gallery/137510953/Chaayos" target="_blank" rel="noopener" data-case="Chaayos" data-where="image">
+            <img src="images/chaayos.jpg" alt="Chaayos mobile app — express ordering experience" loading="lazy" />
+          </a>
         </div>
       </div>
     </div>
@@ -485,11 +511,12 @@ footer{
       </p>
       <div class="p-spec mono">
         <div class="row"><span class="k">Role</span><span class="v">Product Designer</span></div>
+        <div class="row"><span class="k">Duration</span><span class="v">1 Year</span></div>
         <div class="row"><span class="k">Scale</span><span class="v">10M+ Users</span></div>
-        <div class="row"><span class="k">Platform</span><span class="v">Web — Desktop</span></div>
+        <div class="row"><span class="k">Platform</span><span class="v">Desktop · Mobile · Tablet</span></div>
         <div class="row"><span class="k">Focus</span><span class="v">IA · Usability · Reusable UI</span></div>
       </div>
-      <a class="p-link" href="https://www.behance.net/gallery/138887389/ICICI-Bank-Platform" target="_blank" rel="noopener">
+      <a class="p-link" href="https://www.behance.net/gallery/138887389/ICICI-Bank-Platform" target="_blank" rel="noopener" data-case="ICICI Bank" data-where="button">
         Open case study
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
       </a>
@@ -498,7 +525,9 @@ footer{
       <div class="p-frame">
         <span class="dim top">CASE — 02</span>
         <div class="canvas">
-          <img src="images/icici.jpg" alt="ICICI Bank — personal banking and net banking platform" loading="lazy" />
+          <a class="canvas-link" href="https://www.behance.net/gallery/138887389/ICICI-Bank-Platform" target="_blank" rel="noopener" data-case="ICICI Bank" data-where="image">
+            <img src="images/icici.jpg" alt="ICICI Bank — personal banking and net banking platform" loading="lazy" />
+          </a>
         </div>
       </div>
     </div>
@@ -521,7 +550,7 @@ footer{
         <div class="row"><span class="k">Platform</span><span class="v">B2B SaaS — Web</span></div>
         <div class="row"><span class="k">Focus</span><span class="v">Config UX · Systems · Clarity</span></div>
       </div>
-      <a class="p-link" href="https://www.behance.net/gallery/230579343/Rewards-Catalog" target="_blank" rel="noopener">
+      <a class="p-link" href="https://www.behance.net/gallery/230579343/Rewards-Catalog" target="_blank" rel="noopener" data-case="Rewards Catalog" data-where="button">
         Open case study
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
       </a>
@@ -530,7 +559,9 @@ footer{
       <div class="p-frame">
         <span class="dim top">CASE — 03</span>
         <div class="canvas">
-          <img src="images/rewards.jpg" alt="Rewards Catalog — reincarnating the rewards, B2B loyalty platform" loading="lazy" />
+          <a class="canvas-link" href="https://www.behance.net/gallery/230579343/Rewards-Catalog" target="_blank" rel="noopener" data-case="Rewards Catalog" data-where="image">
+            <img src="images/rewards.jpg" alt="Rewards Catalog — reincarnating the rewards, B2B loyalty platform" loading="lazy" />
+          </a>
         </div>
       </div>
     </div>
@@ -573,13 +604,14 @@ footer{
       <div class="stack mono">
         <div class="row"><span class="k">Name</span><span class="v">Utkarsh Singh</span></div>
         <div class="row"><span class="k">Base</span><span class="v">Bangalore, India</span></div>
-        <div class="row"><span class="k">Current</span><span class="v">Capillary Technologies</span></div>
-        <div class="row"><span class="k">Previously</span><span class="v">Sparklin · 7kreinto</span></div>
+        <div class="row"><span class="k">Experience</span><span class="v">Capillary Technologies · May 2022 - Present</span></div>
+        <div class="row"><span class="k"></span><span class="v">Sparklin · Feb 2020 - Feb 2022</span></div>
+        <div class="row"><span class="k"></span><span class="v">7kreinto · Jun 2019 - Feb 2020</span></div>
         <div class="row"><span class="k">Craft</span><span class="v">Product Design · Product Management</span></div>
-        <div class="row"><span class="k">Domains</span><span class="v">B2B SaaS · FinTech · Loyalty</span></div>
-        <div class="row"><span class="k">Tools</span><span class="v">Figma · Figma Make · Lovable · V0</span></div>
+        <div class="row"><span class="k">Domains</span><span class="v">B2B SaaS · B2C · FinTech</span></div>
+        <div class="row"><span class="k">Tools</span><span class="v">Figma · Claude · Notion</span></div>
       </div>
-      <a class="resume-btn" href="resume.pdf" download>
+      <a class="resume-btn" href="resume.pdf" download data-resume="about">
         Download resume — PDF
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v8M2 6l4 4 4-4M1 11h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -609,11 +641,12 @@ footer{
     Let's talk —<br>
     <a href="mailto:singh.utkarsh.aps@gmail.com">say hello</a>
   </h2>
+  <a class="contact-email" href="mailto:singh.utkarsh.aps@gmail.com">singh.utkarsh.aps@gmail.com</a>
   <div class="contact-row">
     <a class="c-link fill" href="mailto:singh.utkarsh.aps@gmail.com">Email me</a>
     <a class="c-link" href="https://www.linkedin.com/in/utkarsh-singh-90a71013b" target="_blank" rel="noopener">LinkedIn</a>
     <a class="c-link" href="https://www.behance.net/utkarshsingh6" target="_blank" rel="noopener">Behance</a>
-    <a class="c-link" href="resume.pdf" download>Resume PDF</a>
+    <a class="c-link" href="resume.pdf" download data-resume="contact">Resume PDF</a>
   </div>
 </section>
 
@@ -664,6 +697,26 @@ const io=new IntersectionObserver(entries=>{
   });
 },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.sr').forEach(el=>io.observe(el));
+
+/* ── GA4 custom events ── */
+function track(name, params){
+  if(typeof gtag === 'function'){ gtag('event', name, params || {}); }
+}
+/* case study clicks — image or button */
+document.querySelectorAll('[data-case]').forEach(el=>{
+  el.addEventListener('click', ()=>{
+    track('case_study_click', {
+      case_study: el.getAttribute('data-case'),
+      source: el.getAttribute('data-where')
+    });
+  });
+});
+/* resume downloads */
+document.querySelectorAll('[data-resume]').forEach(el=>{
+  el.addEventListener('click', ()=>{
+    track('resume_download', { location: el.getAttribute('data-resume') });
+  });
+});
 </script>
 
 </body>
